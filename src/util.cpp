@@ -989,7 +989,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "EndCoin";
 #else
     // Unix
-    return pathRet / "/home/webserver/endcoin";
+    return pathRet / ".EndCoin";
 #endif
 #endif
 }
