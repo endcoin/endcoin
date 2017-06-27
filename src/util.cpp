@@ -975,7 +975,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\EndCoin    // Windows >= Vista: C:\Users\Username\AppData\Roaming\EndCoin    // Mac: ~/Library/Application Support/EndCoin    // Unix: ~/.EndCoin#ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "EndCoin";
-#else
+#else if
     fs::path pathRet;
     char* pszHome = getenv("HOME");
     if (pszHome == NULL || strlen(pszHome) == 0)
@@ -987,7 +987,7 @@ boost::filesystem::path GetDefaultDataDir()
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
     return pathRet / "EndCoin";
-#else
+#else if
     // Unix
     return pathRet / ".EndCoin";
 #endif
