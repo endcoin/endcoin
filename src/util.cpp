@@ -972,11 +972,7 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\FooCoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\FooCoin
-    // Mac: ~/Library/Application Support/FooCoin
-    // Unix: ~/.foocoin
-#ifdef WIN32
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\EndCoin    // Windows >= Vista: C:\Users\Username\AppData\Roaming\EndCoin    // Mac: ~/Library/Application Support/EndCoin    // Unix: ~/.EndCoin#ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "FooCoin";
 #else
