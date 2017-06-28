@@ -2002,7 +2002,7 @@ bool LoadBlockIndex(bool fAllowNew)
     
         
         // Genesis block
-        const char* pszTimestamp = "one to rule them all";
+        const char* pszTimestamp = "news one ring broob to rule them all";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2013,7 +2013,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
-        block.nVersion = 1;
+        block.nVersion = 2;
         block.nTime    = 1498597294; //epochtime
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 0;
